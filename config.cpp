@@ -45,7 +45,11 @@ class CfgWeapons {
 		{
 			magazines[]= {
 				"APERSTripMine_Wire_Mag",
-				"HEHU_FlareTripMine_Wire_Mag"
+				"HEHU_FlareTripMine_Wire_Mag",
+				"HEHU_FlareTripMine_Red_Wire_Mag",
+				"HEHU_FlareTripMine_Yellow_Wire_Mag",
+				"HEHU_FlareTripMine_Green_Wire_Mag",
+				"HEHU_FlareTripMine_Blue_Wire_Mag"
 			};
 			displayName="$STR_A3_cfgMagazines_ClassicMineWireMagazine0";
 		};
@@ -73,6 +77,26 @@ class CfgVehicles
 		};
 	};
 
+	class HEHU_FlareTripMine_Red: HEHU_FlareTripMine {
+		displayName = "Trip flare (red)";
+		ammo="HEHU_FlareTripMine_Red_Wire_Ammo";
+	};
+
+	class HEHU_FlareTripMine_Yellow: HEHU_FlareTripMine {
+		displayName = "Trip flare (yellow)";
+		ammo="HEHU_FlareTripMine_Yellow_Wire_Ammo";
+	};
+
+	class HEHU_FlareTripMine_Green: HEHU_FlareTripMine {
+		displayName = "Trip flare (green)";
+		ammo="HEHU_FlareTripMine_Green_Wire_Ammo";
+	};
+
+	class HEHU_FlareTripMine_Blue: HEHU_FlareTripMine {
+		displayName = "Trip flare (blue)";
+		ammo="HEHU_FlareTripMine_Blue_Wire_Ammo";
+	};
+
 	class Site_Minefield: Module_F
 	{
 		class Arguments
@@ -85,6 +109,30 @@ class CfgVehicles
 					{
 						name="Trip flare";
 						value="HEHU_FlareTripMine";
+						default=0;
+					};
+					class HEHU_FlareTripMine_Red
+					{
+						name="Trip flare (red)";
+						value="HEHU_FlareTripMine_Red";
+						default=0;
+					};
+					class HEHU_FlareTripMine_Yellow
+					{
+						name="Trip flare (yellow)";
+						value="HEHU_FlareTripMine_Yellow";
+						default=0;
+					};
+					class HEHU_FlareTripMine_Green
+					{
+						name="Trip flare (green)";
+						value="HEHU_FlareTripMine_Green";
+						default=0;
+					};
+					class HEHU_FlareTripMine_Blue
+					{
+						name="Trip flare (blue)";
+						value="HEHU_FlareTripMine_Blue";
 						default=0;
 					};
 				};
@@ -135,6 +183,11 @@ class cfgAmmo
 		mineInconspicuousness=50;
 	};
 
+	class HEHU_FlareTripMine_Red_Wire_Ammo: HEHU_FlareTripMine_Wire_Ammo { };
+	class HEHU_FlareTripMine_Yellow_Wire_Ammo: HEHU_FlareTripMine_Wire_Ammo { };
+	class HEHU_FlareTripMine_Green_Wire_Ammo: HEHU_FlareTripMine_Wire_Ammo { };
+	class HEHU_FlareTripMine_Blue_Wire_Ammo: HEHU_FlareTripMine_Wire_Ammo { };
+
 	class HEHU_TF_40mm_White: F_40mm_White
 	{
 		//model="\A3\Weapons_F\Ammo\UGL_Flare";
@@ -151,6 +204,26 @@ class cfgAmmo
 		// From FlareBase:
 		//timeToLive=25;
 		timeToLive=50;
+	};
+
+	class HEHU_TF_40mm_Red: HEHU_TF_40mm_White
+	{
+		lightColor[]={0.5,0.0,0.0,0.5};
+	};
+
+	class HEHU_TF_40mm_Yellow: HEHU_TF_40mm_White
+	{
+		lightColor[]={0.5,0.5,0.0,0.5};
+	};
+
+	class HEHU_TF_40mm_Green: HEHU_TF_40mm_White
+	{
+		lightColor[]={0.0,0.5,0.0,0.5};
+	};
+
+	class HEHU_TF_40mm_Blue: HEHU_TF_40mm_White
+	{
+		lightColor[]={0.0,0.0,0.5,0.5};
 	};
 };
 
@@ -172,6 +245,30 @@ class cfgMagazines
 		descriptionUse="$STR_A3_use_mine";
 		allowedSlots[]={901,701};
 	};
+
+	class HEHU_FlareTripMine_Red_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
+	{
+		ammo="HEHU_FlareTripMine_Red_Wire_Ammo";
+		displayName = "Trip flare (red)";
+	};
+
+	class HEHU_FlareTripMine_Yellow_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
+	{
+		ammo="HEHU_FlareTripMine_Yellow_Wire_Ammo";
+		displayName = "Trip flare (yellow)";
+	};
+
+	class HEHU_FlareTripMine_Green_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
+	{
+		ammo="HEHU_FlareTripMine_Green_Wire_Ammo";
+		displayName = "Trip flare (green)";
+	};
+
+	class HEHU_FlareTripMine_Blue_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
+	{
+		ammo="HEHU_FlareTripMine_Blue_Wire_Ammo";
+		displayName = "Trip flare (blue)";
+	};
 };
 
 class BoundingFlareExplosion {
@@ -183,14 +280,6 @@ class BoundingFlareExplosion {
 		simulation = "light";
 		type = "ExploLight";
 	};
-	// class Explosion1 {
-	// 	intensity = 3;
-	// 	interval = 1;
-	// 	lifetime = 0.25;
-	// 	position[] = {0, 0, 0};
-	// 	simulation = "particles";
-	// 	type = "MineExplosionParticles";
-	// };
 	class SmallSmoke1 {
 		intensity = 1;
 		interval = 1;
@@ -208,38 +297,3 @@ class BoundingFlareExplosion {
 		type = "FireSparksSmall1";
 	};
 };
-
-// class BoundingMineExplosion {
-// 	class LightExp {
-// 		intensity = 0.001;
-// 		interval = 1;
-// 		lifetime = 0.5;
-// 		position[] = {0, 1.5, 0};
-// 		simulation = "light";
-// 		type = "ExploLight";
-// 	};
-// 	class Explosion1 {
-// 		intensity = 3;
-// 		interval = 1;
-// 		lifetime = 0.25;
-// 		position[] = {0, 0, 0};
-// 		simulation = "particles";
-// 		type = "MineExplosionParticles";
-// 	};
-// 	class SmallSmoke1 {
-// 		intensity = 1;
-// 		interval = 1;
-// 		lifetime = 1;
-// 		position[] = {0, 0, 0};
-// 		simulation = "particles";
-// 		type = "CloudSmallLight1";
-// 	};
-// 	class FireSparksSmall1 {
-// 		intensity = 1;
-// 		interval = 1;
-// 		lifetime = 1;
-// 		position[] = {0, 0, 0};
-// 		simulation = "particles";
-// 		type = "FireSparksSmall1";
-// 	};
-// };
