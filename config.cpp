@@ -25,9 +25,26 @@ class CfgFunctions {
 			class Fired {
 				file = "hehu_tripflare\scripts\fired.sqf";
 			};
+			class Placed {
+				file = "hehu_tripflare\scripts\placed.sqf";
+			};
 			class Activate {
 				file = "hehu_tripflare\scripts\activate.sqf";
 			};
+		};
+	};
+};
+
+class CfgWeapons {
+	class Default;
+	class Put: Default {
+		class ClassicMineRangeMuzzle;
+		class ClassicMineWireMuzzle: ClassicMineRangeMuzzle	{
+			magazines[]= {
+				"APERSTripMine_Wire_Mag",
+				"HEHU_FlareTripMine_Wire_Mag"
+			};
+			displayName="$STR_A3_cfgMagazines_ClassicMineWireMagazine0";
 		};
 	};
 };
@@ -55,6 +72,8 @@ class CfgVehicles
 class cfgAmmo
 {
 	class PipeBombBase;
+	class F_40mm_White;
+
 	class HEHU_FlareTripMine_Wire_Ammo: PipeBombBase
 	{
 		// Mine effect is triggered by script.
@@ -69,14 +88,14 @@ class cfgAmmo
 		defaultMagazine="HEHU_FlareTripMine_Wire_Mag";
 		soundHit[]=
 		{
-			"A3\Sounds_F\weapons\mines\mine_3",
+			//"A3\Sounds_F\weapons\mines\mine_3",
+			"A3\Sounds_F\weapons\Flare_Gun\flaregun_1_shoot",
 			3.1622777,
 			1,
 			1500
 		};
 
-		//explosionEffects="BoundingFlareExplosion";
-		explosionEffects="";
+		explosionEffects="BoundingFlareExplosion";
 		
 		//CraterEffects="BoundingMineCrater";
 		CraterEffects="";
@@ -90,6 +109,24 @@ class cfgAmmo
 
 		mineTrigger="WireTrigger";
 		mineInconspicuousness=50;
+	};
+
+	class HEHU_TF_40mm_White: F_40mm_White
+	{
+		//model="\A3\Weapons_F\Ammo\UGL_Flare";
+		//lightColor[]={0.5,0.5,0.5,0.5};
+		//useFlare=1;
+		//deflecting=30;
+		//smokeColor[]={1,1,1,0.5};
+		//effectFlare="CounterMeasureFlare";
+		//brightness=12;
+		//size=1;
+		triggerTime=0.1;
+		//triggerSpeedCoef=1;
+
+		// From FlareBase:
+		//timeToLive=25;
+		timeToLive=50;
 	};
 };
 
