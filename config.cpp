@@ -10,7 +10,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"A3_Weapons_F_Explosives"
+			"A3_Weapons_F_Explosives",
+			"A3_Modules_F_Sites"
 		};
 	};
 };
@@ -37,9 +38,11 @@ class CfgFunctions {
 
 class CfgWeapons {
 	class Default;
-	class Put: Default {
+	class Put: Default
+	{
 		class ClassicMineRangeMuzzle;
-		class ClassicMineWireMuzzle: ClassicMineRangeMuzzle	{
+		class ClassicMineWireMuzzle: ClassicMineRangeMuzzle
+		{
 			magazines[]= {
 				"APERSTripMine_Wire_Mag",
 				"HEHU_FlareTripMine_Wire_Mag"
@@ -52,6 +55,8 @@ class CfgWeapons {
 class CfgVehicles
 {
 	class APERSTripMine;
+	class Module_F;
+
 	class HEHU_FlareTripMine: APERSTripMine
 	{
 		author="Magnus Bergmark";
@@ -65,6 +70,25 @@ class CfgVehicles
 		class Library
 		{
 			libTextDesc="$STR_A3_cfgMagazines_ClassicMineWireMagazine_Library0";
+		};
+	};
+
+	class Site_Minefield: Module_F
+	{
+		class Arguments
+		{
+			class minesType
+			{
+				class values
+				{
+					class HEHU_FlareTripMine
+					{
+						name="Trip flare";
+						value="HEHU_FlareTripMine";
+						default=0;
+					};
+				};
+			};
 		};
 	};
 };
