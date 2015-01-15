@@ -89,7 +89,7 @@ Fire a flare from the location provided.
 Thanks to the following people, which I reverse-engineered stuff from:
 
 * [Amit](http://forums.bistudio.com/member.php?130119-Amit): [[Tutorial] Simple Re-texturing Guide (From Start To Finish)](http://forums.bistudio.com/showthread.php?161027-Tutorial-Simple-Re-texturing-Guide-(From-Start-To-Finish)) - Thank you for telling me how to create a small addon, how to inherit the BIS stuff and patch them.
-* [flyinpenguin](http://forums.bistudio.com/member.php?144624-flyinpenguin): [EMP Pack -WIP-](http://forums.bistudio.com/showthread.php?178067-EMP-Pack-WIP) - I would never hav figured out how to run a script on mine detonation without this little addon. Thank you!
+* [flyinpenguin](http://forums.bistudio.com/member.php?144624-flyinpenguin): [EMP Pack -WIP-](http://forums.bistudio.com/showthread.php?178067-EMP-Pack-WIP) - I would never have figured out how to run a script on mine detonation without this little addon. Thank you!
 
 ## Copyright
 
