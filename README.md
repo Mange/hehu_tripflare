@@ -24,8 +24,14 @@ There seems to be no way of detecting when a mine is detonated, so the script wo
 
 * What happens when joining in progress (JIP)? Is the "init" script run for that player?
 * Is it really necessary for each player to have their own handler/spawned functions? Can't the server keep track of the mines and spawn flares? I think this is all client-side.
-* When disarming a mine and picking it up, what happens?
+* When disarming a mine it fires a flare.
 * Every flare color except for the white is made by "Unknown community author".
+
+## Building
+
+Check out the repository, make sure Arma 3 Tools from BIS is installed and copy `make.example.bat.txt` into `make.bat`, edit the paths in it and then run the batch file.
+
+The finished mod will be placed in `target_directory` that you specify.
 
 ## Class names
 
