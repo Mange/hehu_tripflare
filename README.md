@@ -20,6 +20,10 @@ There seems to be no way of detecting when a mine is detonated, so the script wo
 3. Attach event handler to player that repeats this on any newly placed mines
 	* This needs to be broadcast to every other player!
 
+### Video
+
+[![See video on YouTube.](http://img.youtube.com/vi/Q7QojMsZC7w/hqdefault.jpg)](https://www.youtube.com/watch?v=Q7QojMsZC7w)
+
 ### Problems
 
 * What happens when joining in progress (JIP)? Is the "init" script run for that player?
