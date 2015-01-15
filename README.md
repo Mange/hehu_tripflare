@@ -25,7 +25,6 @@ There seems to be no way of detecting when a mine is detonated, so the script wo
 * What happens when joining in progress (JIP)? Is the "init" script run for that player?
 * Is it really necessary for each player to have their own handler/spawned functions? Can't the server keep track of the mines and spawn flares? I think this is all client-side.
 * When triggering a mine within 2 meters from a disabled mine, it does not fire a flare.
-* Every flare color except for the white is made by "Unknown community author".
 
 ## Building
 

@@ -61,8 +61,7 @@ class CfgVehicles
 	class APERSTripMine;
 	class Module_F;
 
-	class HEHU_FlareTripMine: APERSTripMine
-	{
+	class HEHU_FlareTripMine: APERSTripMine	{
 		author="Magnus Bergmark";
 		_generalMacro="APERSTripMine";
 		scope=2;
@@ -78,22 +77,26 @@ class CfgVehicles
 	};
 
 	class HEHU_FlareTripMine_Red: HEHU_FlareTripMine {
-		displayName = "Trip flare (red)";
+		author="Magnus Bergmark";
+		displayName = "Trip flare (Red)";
 		ammo="HEHU_FlareTripMine_Red_Wire_Ammo";
 	};
 
 	class HEHU_FlareTripMine_Yellow: HEHU_FlareTripMine {
-		displayName = "Trip flare (yellow)";
+		author="Magnus Bergmark";
+		displayName = "Trip flare (Yellow)";
 		ammo="HEHU_FlareTripMine_Yellow_Wire_Ammo";
 	};
 
 	class HEHU_FlareTripMine_Green: HEHU_FlareTripMine {
-		displayName = "Trip flare (green)";
+		author="Magnus Bergmark";
+		displayName = "Trip flare (Green)";
 		ammo="HEHU_FlareTripMine_Green_Wire_Ammo";
 	};
 
 	class HEHU_FlareTripMine_Blue: HEHU_FlareTripMine {
-		displayName = "Trip flare (blue)";
+		author="Magnus Bergmark";
+		displayName = "Trip flare (Blue)";
 		ammo="HEHU_FlareTripMine_Blue_Wire_Ammo";
 	};
 
@@ -113,25 +116,25 @@ class CfgVehicles
 					};
 					class HEHU_FlareTripMine_Red
 					{
-						name="Trip flare (red)";
+						name="Trip flare (Red)";
 						value="HEHU_FlareTripMine_Red";
 						default=0;
 					};
 					class HEHU_FlareTripMine_Yellow
 					{
-						name="Trip flare (yellow)";
+						name="Trip flare (Yellow)";
 						value="HEHU_FlareTripMine_Yellow";
 						default=0;
 					};
 					class HEHU_FlareTripMine_Green
 					{
-						name="Trip flare (green)";
+						name="Trip flare (Green)";
 						value="HEHU_FlareTripMine_Green";
 						default=0;
 					};
 					class HEHU_FlareTripMine_Blue
 					{
-						name="Trip flare (blue)";
+						name="Trip flare (Blue)";
 						value="HEHU_FlareTripMine_Blue";
 						default=0;
 					};
@@ -249,25 +252,25 @@ class cfgMagazines
 	class HEHU_FlareTripMine_Red_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
 	{
 		ammo="HEHU_FlareTripMine_Red_Wire_Ammo";
-		displayName = "Trip flare (red)";
+		displayName = "Trip flare (Red)";
 	};
 
 	class HEHU_FlareTripMine_Yellow_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
 	{
 		ammo="HEHU_FlareTripMine_Yellow_Wire_Ammo";
-		displayName = "Trip flare (yellow)";
+		displayName = "Trip flare (Yellow)";
 	};
 
 	class HEHU_FlareTripMine_Green_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
 	{
 		ammo="HEHU_FlareTripMine_Green_Wire_Ammo";
-		displayName = "Trip flare (green)";
+		displayName = "Trip flare (Green)";
 	};
 
 	class HEHU_FlareTripMine_Blue_Wire_Mag: HEHU_FlareTripMine_Wire_Mag
 	{
 		ammo="HEHU_FlareTripMine_Blue_Wire_Ammo";
-		displayName = "Trip flare (blue)";
+		displayName = "Trip flare (Blue)";
 	};
 };
 
