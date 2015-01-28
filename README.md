@@ -10,14 +10,12 @@ Use them to see enemy advancements instead of killing a few of them. A flare all
 
 This is my first Arma 3 mod. It's very much the work of an amateur.
 
-**This mod is still not tested in multiplayer!** I *guarantee* you that it will not work properly in multiplayer.
-
 There seems to be no way of detecting when a mine is detonated, so the script works in this way:
 
-1. Find all mines within a large distance of the current player
-2. Spawn a function that waits for the mine to disappear
+1. Find all mines on the map.
+2. Spawn a function that waits for the mine to disappear.
 	* When mine is gone, trigger detonation.
-3. Attach event handler to player that repeats this on any newly placed mines
+3. Attach event handler to player that repeats this on any newly placed mines.
 	* This needs to be broadcast to every other player!
 
 ### Video
@@ -26,9 +24,8 @@ There seems to be no way of detecting when a mine is detonated, so the script wo
 
 ### Problems
 
-* What happens when joining in progress (JIP)? Is the "init" script run for that player?
-* Is it really necessary for each player to have their own handler/spawned functions? Can't the server keep track of the mines and spawn flares? I think this is all client-side.
 * When triggering a mine within 2 meters from a disabled mine, it does not fire a flare.
+* Only the "owner" of the mine sees an explosion effect and hears the flare sound when a mine is triggered.
 
 ## Building
 

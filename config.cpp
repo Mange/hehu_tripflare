@@ -144,6 +144,33 @@ class CfgVehicles
 	};
 };
 
+class HEHU_Tripflare_Explosion {
+	class LightExp {
+		intensity = 0.001;
+		interval = 1;
+		lifetime = 0.5;
+		position[] = {0, 1.5, 0};
+		simulation = "light";
+		type = "ExploLight";
+	};
+	class SmallSmoke1 {
+		intensity = 1;
+		interval = 1;
+		lifetime = 1;
+		position[] = {0, 0, 0};
+		simulation = "particles";
+		type = "CloudSmallLight1";
+	};
+	class FireSparksSmall1 {
+		intensity = 1;
+		interval = 1;
+		lifetime = 1;
+		position[] = {0, 0, 0};
+		simulation = "particles";
+		type = "FireSparksSmall1";
+	};
+};
+
 class cfgAmmo
 {
 	class PipeBombBase;
@@ -170,9 +197,8 @@ class cfgAmmo
 			1500
 		};
 
-		explosionEffects="BoundingFlareExplosion";
-		
-		//CraterEffects="BoundingMineCrater";
+		explosionEffects="HEHU_Tripflare_Explosion";
+
 		CraterEffects="";
 
 		//mineJumpEffects="MineJumpEffect";
@@ -271,32 +297,5 @@ class cfgMagazines
 	{
 		ammo="HEHU_FlareTripMine_Blue_Wire_Ammo";
 		displayName = "Trip flare (Blue)";
-	};
-};
-
-class BoundingFlareExplosion {
-	class LightExp {
-		intensity = 0.001;
-		interval = 1;
-		lifetime = 0.5;
-		position[] = {0, 1.5, 0};
-		simulation = "light";
-		type = "ExploLight";
-	};
-	class SmallSmoke1 {
-		intensity = 1;
-		interval = 1;
-		lifetime = 1;
-		position[] = {0, 0, 0};
-		simulation = "particles";
-		type = "CloudSmallLight1";
-	};
-	class FireSparksSmall1 {
-		intensity = 1;
-		interval = 1;
-		lifetime = 1;
-		position[] = {0, 0, 0};
-		simulation = "particles";
-		type = "FireSparksSmall1";
 	};
 };
